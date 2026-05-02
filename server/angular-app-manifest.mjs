@@ -2,7 +2,7 @@
 export default {
   bootstrap: () => import('./main.server.mjs').then(m => m.default),
   inlineCriticalCss: true,
-  baseHref: 'https://juniorsousa53339-svg.github.io/landing-page-barbearia/',
+  baseHref: '/landing-page-barbearia/',
   locale: undefined,
   routes: [
   {
@@ -12,9 +12,9 @@ export default {
 ],
   entryPointToBrowserMapping: undefined,
   assets: {
-    'index.csr.html': {size: 734, hash: 'e15d9dbaf32a9696671a857b569be2d25d1fb5c2c949b0b8368579c4dad62b46', text: () => import('./assets-chunks/index_csr_html.mjs').then(m => m.default)},
-    'index.server.html': {size: 1015, hash: '7b6ce1e260f4a4e68956c5c36803d517ecbc6c97a82c651eca73b237f89a0a25', text: () => import('./assets-chunks/index_server_html.mjs').then(m => m.default)},
-    'index.html': {size: 31834, hash: '84f64a7a75b6417ca53a198b7d592662f241b51492a0860fc930ea86286b907b', text: () => import('./assets-chunks/index_html.mjs').then(m => m.default)},
+    'index.csr.html': {size: 696, hash: '0bacf5e301dde88fd3f437d1d5f8a7344d39cf0faef6272820c3a1e4b4bf773d', text: () => import('./assets-chunks/index_csr_html.mjs').then(m => m.default)},
+    'index.server.html': {size: 977, hash: '3e08a796772685e5d2e35489875cf9c67eedd9d12d8b613704e4dd07987ee3e2', text: () => import('./assets-chunks/index_server_html.mjs').then(m => m.default)},
+    'index.html': {size: 31796, hash: '8c894ea1e6f474f890bce0f0681b61fe11d4c89a22ef0db89f894cf944ced193', text: () => import('./assets-chunks/index_html.mjs').then(m => m.default)},
     'styles-7N5O6TXI.css': {size: 2159, hash: '0LkjmZ28ngE', text: () => import('./assets-chunks/styles-7N5O6TXI_css.mjs').then(m => m.default)}
   },
 };
