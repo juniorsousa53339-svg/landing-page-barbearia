@@ -1,0 +1,189 @@
+/* =========================
+HEADER BASE
+========================= */
+.header {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 1000;
+
+  background: rgba(10, 10, 10, 0.6);
+  backdrop-filter: blur(10px);
+
+  border-bottom: 1px solid rgba(255,255,255,0.05);
+
+  transition: all 0.3s ease;
+}
+
+/* efeito ao scroll */
+.header.scrolled {
+  background: rgba(10,10,10,0.85);
+  backdrop-filter: blur(15px);
+}
+
+
+/* =========================
+LAYOUT
+========================= */
+.header-content {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 16px 20px;
+}
+
+
+/* =========================
+LOGO
+========================= */
+.logo {
+  color: #f5e6c8;
+  font-weight: 700;
+  font-size: 18px;
+}
+
+
+/* =========================
+MENU DESKTOP
+========================= */
+.nav {
+  display: none;
+  gap: 30px;
+}
+
+.nav a {
+  color: #ccc;
+  text-decoration: none;
+  font-size: 14px;
+  position: relative;
+
+  transition: 0.3s;
+}
+
+/* efeito underline moderno */
+.nav a::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -4px;
+  width: 0%;
+  height: 2px;
+  background: #d4a84f;
+  transition: 0.3s;
+}
+
+.nav a:hover {
+  color: #d4a84f;
+}
+
+.nav a:hover::after {
+  width: 100%;
+}
+
+
+/* =========================
+BOTÃO MOBILE
+========================= */
+.menu-toggle {
+  font-size: 24px;
+  color: #d4a84f;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.menu-toggle:hover {
+  transform: scale(1.1);
+}
+
+
+/* =========================
+OVERLAY
+========================= */
+.overlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(0,0,0,0.5);
+
+  opacity: 0;
+  pointer-events: none;
+
+  transition: opacity 0.3s ease;
+}
+
+.overlay.open {
+  opacity: 1;
+  pointer-events: all;
+}
+
+
+/* =========================
+MENU MOBILE
+========================= */
+.mobile-menu {
+  position: fixed;
+  top: 0;
+  right: -100%;
+  width: 75%;
+  height: 100vh;
+
+  background: rgba(10,10,10,0.95);
+  backdrop-filter: blur(20px);
+
+  display: flex;
+  flex-direction: column;
+  padding: 100px 30px;
+  gap: 25px;
+
+  transition: right 0.4s ease;
+}
+
+.mobile-menu.open {
+  right: 0;
+}
+
+
+/* =========================
+LINKS MOBILE (ANIMAÇÃO)
+========================= */
+.mobile-menu a {
+  color: #fff;
+  text-decoration: none;
+  font-size: 18px;
+
+  opacity: 0;
+  transform: translateX(40px);
+
+  transition: all 0.4s ease;
+}
+
+/* quando abre */
+.mobile-menu.open a {
+  opacity: 1;
+  transform: translateX(0);
+}
+
+/* efeito cascata */
+.mobile-menu.open a:nth-child(1) { transition-delay: 0.1s; }
+.mobile-menu.open a:nth-child(2) { transition-delay: 0.2s; }
+.mobile-menu.open a:nth-child(3) { transition-delay: 0.3s; }
+.mobile-menu.open a:nth-child(4) { transition-delay: 0.4s; }
+
+
+/* =========================
+RESPONSIVO
+========================= */
+@media (min-width: 768px) {
+
+  .nav {
+    display: flex;
+  }
+
+  .menu-toggle {
+    display: none;
+  }
+
+  .mobile-menu {
+    display: none;
+  }
+
+}

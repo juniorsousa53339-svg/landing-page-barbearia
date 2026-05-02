@@ -1,0 +1,181 @@
+/* =========================
+SECTION
+========================= */
+
+.cta-section {
+  background: #1a1a1a; /* contraste com seção anterior */
+  padding: 120px 20px;
+}
+
+/* =========================
+CARD PRINCIPAL
+========================= */
+
+.cta-card {
+  background: #0f0f0f;
+
+  max-width: 1000px;
+  margin: 0 auto;
+
+  padding: 60px 40px;
+  border-radius: 24px;
+
+  text-align: center;
+
+  /* borda dourada premium */
+    border: 1px solid rgba(212, 168, 79, 0.55);
+}
+
+/* =========================
+TÍTULO (igual outras seções)
+========================= */
+
+.cta-card h2 {
+  font-family: 'Oswald', sans-serif;
+  font-size: 36px;
+  font-weight: 700;
+
+  color: rgba(255, 255, 255, 0.92);
+
+  margin-bottom: 15px;
+}
+
+/* =========================
+SUBTÍTULO (igual padrão do site)
+========================= */
+
+.cta-card .subtitle {
+  color: #9f9f9f;
+  font-size: 14px;
+  line-height: 1.5;
+
+  margin-bottom: 40px;
+}
+
+/* =========================
+INFOS (CEP + HORÁRIO)
+========================= */
+
+.cta-info {
+  display: flex;
+  align-items: center;
+   flex-direction: column; /* agora empilha */
+
+  gap: 15px;
+
+  margin-bottom: 40px;
+}
+
+/* item */
+.info-item {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+
+  color: #9f9f9f;
+  font-size: 14px;
+}
+
+/* ícones */
+.cta-icon {
+  width: 18px;
+  height: 18px;
+  object-fit: contain;
+}
+
+/* divisor */
+.info-divider {
+   width: 60%;
+  height: 1px;
+  background: rgba(255,255,255,0.08);
+}
+
+/* =========================
+BOTÃO WHATSAPP
+========================= */
+
+.cta-button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+
+  gap: 10px;
+
+  padding: 15px 28px;
+  border-radius: 12px;
+
+  text-decoration: none;
+  font-weight: 600;
+
+  color: #0f0f0f;
+
+  background: linear-gradient(
+    135deg,
+   #b8893a,
+    #d4a84f
+  );
+
+  transition: all 0.25s ease;
+
+  cursor: pointer;
+}
+
+/* hover */
+.cta-button:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 20px rgba(212,168,79,0.18);
+}
+
+/* clique */
+.cta-button:active {
+  transform: scale(0.96);
+  filter: saturate(1.4);
+}
+
+/* ícone whatsapp */
+.wa-icon {
+  width: 24px;
+  height: 24px;
+}
+
+
+/* =========================
+RESET DA ANIMAÇÃO INTERNA
+========================= */
+
+.cta-card h2,
+.cta-card .subtitle,
+.cta-card .cta-info,
+.cta-card .cta-button {
+  opacity: 0;
+  transform: translateY(25px);
+  transition: all 0.7s ease;
+}
+
+/* =========================
+QUANDO O REVEAL ATIVA O CARD
+========================= */
+
+.cta-card.reveal.active h2 {
+  opacity: 1;
+  transform: translateY(0);
+  transition-delay: 0.1s;
+}
+
+.cta-card.reveal.active .subtitle {
+  opacity: 1;
+  transform: translateY(0);
+  transition-delay: 0.25s;
+}
+
+.cta-card.reveal.active .cta-info {
+  opacity: 1;
+  transform: translateY(0);
+  transition-delay: 0.4s;
+}
+
+.cta-card.reveal.active .cta-button {
+  opacity: 1;
+  transform: translateY(0);
+  transition-delay: 0.55s;
+}

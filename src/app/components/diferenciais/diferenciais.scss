@@ -1,0 +1,148 @@
+/* =========================
+SECTION BASE
+========================= */
+
+.differentials {
+  background: #0b0b0b;
+  padding: 100px 20px;
+}
+
+/* =========================
+GRID
+========================= */
+
+.diff-list {
+  display: grid;
+  gap: 40px;
+}
+
+/* Desktop */
+@media (min-width: 768px) {
+  .diff-list {
+    grid-template-columns: repeat(3, 1fr);
+    gap: 50px;
+  }
+}
+
+/* =========================
+ITEM
+========================= */
+
+.diff-item {
+  text-align: center;
+  padding: 10px 20px;
+
+  transition: all 0.4s ease;
+}
+
+/* =========================
+ÍCONE
+========================= */
+
+.icon {
+  width: 70px;
+  height: 70px;
+
+  margin: 0 auto 20px;
+
+  border-radius: 50%;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  font-size: 28px;
+
+  background: radial-gradient(
+    circle at top,
+    rgba(212,168,79,0.4),
+    #0b0b0b
+  );
+
+  border: 1px solid rgba(212,168,79,0.3);
+
+  transition: all 0.4s ease;
+}
+
+/* =========================
+TEXTO
+========================= */
+
+.diff-item h3 {
+  font-family: 'Oswald', sans-serif;
+  color: #d4a84f;
+  font-size: 20px;
+  margin-bottom: 10px;
+}
+
+.diff-item p {
+  color: #9f9f9f;
+  font-size: 14px;
+  line-height: 1.5;
+}
+
+/* =========================
+HOVER (DESKTOP)
+========================= */
+
+@media (hover: hover) {
+
+  .diff-item:hover {
+    transform: translateY(-8px);
+  }
+
+  .diff-item:hover .icon {
+    transform: scale(1.1);
+
+    box-shadow:
+      0 0 20px rgba(212,168,79,0.3),
+      0 0 40px rgba(212,168,79,0.15);
+  }
+}
+
+/* =========================
+TOUCH (MOBILE)
+========================= */
+
+.diff-item:active {
+  transform: scale(0.97);
+}
+
+/* =========================
+REVEAL (ANIMAÇÃO)
+========================= */
+
+.reveal {
+  opacity: 0;
+  transform: translateY(40px);
+  transition: all 0.8s ease;
+
+    opacity: 1 !important;
+}
+
+.reveal.active {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* delay progressivo */
+.diff-item:nth-child(1) { transition-delay: 0.1s; }
+.diff-item:nth-child(2) { transition-delay: 0.2s; }
+.diff-item:nth-child(3) { transition-delay: 0.3s; }
+
+.section-header {
+  text-align: center;
+  margin-bottom: 60px;
+}
+
+.section-header h2 {
+  font-family: 'Oswald', sans-serif;
+  font-size: 36px; /* MESMO dos serviços */
+  font-weight: 700;
+  color: rgba(255, 255, 255, 0.92);
+}
+
+.section-header p {
+  color: #9f9f9f;
+  font-size: 14px;
+}

@@ -1,0 +1,241 @@
+/* =========================
+SECTION BASE
+========================= */
+
+.services {
+  background: #111;
+  padding: 100px 20px;
+}
+
+/* =========================
+HEADER
+========================= */
+
+.section-header {
+  text-align: center;
+  margin-bottom: 70px;
+}
+
+.section-header h2 {
+  font-family: 'Oswald', sans-serif;
+  font-size: 36px;
+  font-weight: 700;
+  letter-spacing: -1px;
+  color: rgba(255,255,255,0.92);
+}
+
+.section-header p {
+  color: #9f9f9f;
+  font-size: 14px;
+  margin-top: 10px;
+}
+
+/* =========================
+GRID (ESPAÇAMENTO MELHORADO)
+========================= */
+
+.cards {
+  display: grid;
+  gap: 28px; /* AQUI resolvemos o problema de "tudo junto" */
+}
+
+/* Desktop */
+@media (min-width: 768px) {
+  .cards {
+    grid-template-columns: repeat(3, 1fr);
+    gap: 32px;
+  }
+}
+
+/* =========================
+CARD BASE
+========================= */
+
+.card {
+  background: rgba(18,18,18,0.95);
+  border-radius: 18px;
+
+  border: 1px solid rgba(212,168,79,0.2);
+
+  overflow: hidden;
+  position: relative;
+
+  padding: 18px;
+
+  transition: all 0.4s cubic-bezier(.25,.8,.25,1);
+}
+
+/* =========================
+IMAGEM
+========================= */
+
+.card-image {
+  height: 180px;
+  border-radius: 12px;
+  overflow: hidden;
+  margin-bottom: 20px;
+}
+
+.card-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+
+  transition: transform 0.6s ease;
+}
+
+/* =========================
+CONTEÚDO
+========================= */
+
+.card-content {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+/* TÍTULO */
+.card h3 {
+  font-family: 'Oswald', sans-serif;
+  color: #d4a84f;
+  font-size: 20px;
+  letter-spacing: -0.5px;
+}
+
+/* DESCRIÇÃO */
+.card p {
+  color: #9f9f9f;
+  font-size: 14px;
+  line-height: 1.5;
+}
+
+/* PREÇO */
+.price {
+  color: #fff;
+  font-weight: 600;
+  margin-top: 5px;
+}
+
+/* PREÇO PROMO */
+.price-group {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.old {
+  color: #777;
+  text-decoration: line-through;
+  font-size: 14px;
+}
+
+.new {
+  color: #fff;
+  font-weight: bold;
+  font-size: 16px;
+}
+
+/* =========================
+BOTÃO
+========================= */
+
+.btn-card {
+  margin-top: 10px;
+
+  padding: 12px;
+  text-align: center;
+
+  border-radius: 10px;
+  border: 1px solid #d4a84f;
+
+  color: #d4a84f;
+  text-decoration: none;
+
+  transition: all 0.3s ease;
+}
+
+.btn-card:active {
+  transform: scale(0.97); /* MOBILE FEEDBACK */
+}
+
+.btn-card:hover {
+  background: #d4a84f;
+  color: #000;
+}
+
+/* =========================
+HOVER (DESKTOP)
+========================= */
+
+@media (hover: hover) {
+
+  .card:hover {
+    transform: translateY(-10px) scale(1.01);
+
+    border-color: #d4a84f;
+
+    box-shadow:
+      0 20px 40px rgba(0,0,0,0.6),
+      0 0 20px rgba(212,168,79,0.15);
+  }
+
+  .card:hover img {
+    transform: scale(1.1);
+  }
+}
+
+/* =========================
+TOUCH EFFECT (MOBILE)
+========================= */
+
+.card:active {
+  transform: scale(0.98);
+}
+
+/* =========================
+GLOW PREMIUM
+========================= */
+
+.card::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+
+  background: radial-gradient(
+    circle at top,
+    rgba(212,168,79,0.15),
+    transparent 70%
+  );
+
+  opacity: 0;
+  transition: 0.4s;
+}
+
+.card:hover::before {
+  opacity: 1;
+}
+
+/* =========================
+REVEAL ANIMATION (SCROLL)
+========================= */
+
+.reveal {
+ // opacity: 0;
+  transform: translateY(40px);
+  transition: all 0.8s ease;
+}
+
+.reveal.active {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* delay progressivo */
+.reveal:nth-child(1) { transition-delay: 0.1s; }
+.reveal:nth-child(2) { transition-delay: 0.2s; }
+.reveal:nth-child(3) { transition-delay: 0.3s; }
+
+.section-header {
+  opacity: 1 !important;
+  display: block !important;
+}

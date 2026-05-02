@@ -1,0 +1,128 @@
+/* =========================
+SECTION
+========================= */
+
+.testimonials {
+  background: #0f0f0f;
+  padding: 120px 20px;
+}
+
+/* =========================
+HEADER (igual padrão do site)
+========================= */
+
+.testimonials .section-header {
+  text-align: center;
+  margin-bottom: 80px;
+}
+
+.testimonials .section-header h2 {
+  font-family: 'Oswald', sans-serif;
+  font-size: 36px;
+  font-weight: 700;
+  color: rgba(255, 255, 255, 0.92);
+  margin-bottom: 10px;
+}
+
+.testimonials .section-header p {
+  color: #9f9f9f;
+  font-size: 14px;
+}
+
+/* =========================
+GRID
+========================= */
+
+.testimonials-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 20px;
+}
+
+/* =========================
+CARD
+========================= */
+
+.testimonial-card {
+  b.testimonial-card {
+  background: #111;
+  padding: 30px 25px;
+  border-radius: 18px;
+  text-align: center;
+
+  transition: all 0.4s ease;
+
+  /* BORDA PREMIUM SUAVE */
+  border: 1px solid rgba(212, 168, 79, 0.25);
+
+  /* glow bem sutil (efeito neon controlado) */
+  box-shadow: 0 0 0 rgba(212, 168, 79, 0);
+}
+}
+
+/* hover leve */
+.testimonial-card:hover {
+  ttransform: translateY(-6px);
+
+  border: 1px solid rgba(212, 168, 79, 0.5);
+
+  box-shadow: 0 10px 30px rgba(212, 168, 79, 0.08);
+}
+
+/* =========================
+ESTRELAS
+========================= */
+
+.stars {
+  color: #d4a84f;
+  font-size: 18px;
+  margin-bottom: 15px;
+}
+
+/* =========================
+DEPOIMENTO
+========================= */
+
+.text {
+  color: #9f9f9f; /* subtítulo */
+  font-size: 14px;
+  line-height: 1.6;
+  margin-bottom: 20px;
+}
+
+/* =========================
+NOME
+========================= */
+
+.name {
+  color: rgba(255, 255, 255, 0.92); /* título */
+  font-size: 16px;
+  font-weight: 600;
+}
+
+/* =========================
+REVEAL (já padrão seu)
+========================= */
+
+.reveal {
+  opacity: 0;
+  transform: translateY(40px);
+  transition: all 0.8s ease;
+}
+
+.reveal.active {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* =========================
+DESKTOP
+========================= */
+
+@media (min-width: 768px) {
+
+  .testimonials-grid {
+    grid-template-columns: repeat(3, 1fr);
+    gap: 25px;
+  }
+}

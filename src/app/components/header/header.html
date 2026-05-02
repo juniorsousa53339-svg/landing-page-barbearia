@@ -1,0 +1,39 @@
+<header class="header">
+
+  <div class="container header-content">
+
+    <!-- LOGO -->
+    <div class="logo">
+     <img src="assets/LucDev barber (3).svg" />
+    </div>
+
+    <!-- MENU DESKTOP -->
+    <nav class="nav">
+      <a href="#servicos">Serviços</a>
+      <a href="#diferenciais">Diferenciais</a>
+      <a href="#galeria">Galeria</a>
+      <a href="#depoimentos">Depoimentos</a>
+    </nav>
+
+    <!-- BOTÃO MOBILE -->
+    <div class="menu-toggle" (click)="toggleMenu()">
+      ☰
+    </div>
+
+  </div>
+
+  <div class="overlay"
+       [class.open]="menuOpen"
+       (click)="closeMenu()">
+      </div>
+
+
+  <!-- MENU MOBILE -->
+ <div class="mobile-menu" [class.open]="menuOpen">
+  <a href="#servicos" (click)="closeMenu()">Serviços</a>
+  <a href="#diferenciais" (click)="closeMenu()">Diferenciais</a>
+  <a href="#galeria" (click)="closeMenu()">Galeria</a>
+  <a href="#depoimentos" (click)="closeMenu()">Depoimentos</a>
+</div>
+
+</header>

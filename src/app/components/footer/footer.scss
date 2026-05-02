@@ -1,0 +1,55 @@
+
+/* =========================
+FOOTER
+========================= */
+
+.footer {
+  background: #0b0b0b;
+  padding: 30px 20px; /* mais compacto */
+}
+
+/* =========================
+CONTEÚDO
+========================= */
+
+.footer-content {
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  gap: 6px; /* mais próximo, mais fino */
+}
+
+/* =========================
+SELO (2026)
+========================= */
+
+.footer-badge {
+  color: #9f9f9f;
+  font-size: 13px;
+  font-family: 'Oswald', sans-serif;
+
+  font-weight: 300; /* mais fino */
+  letter-spacing: 1px;
+}
+
+/* =========================
+TEXTO PRINCIPAL
+========================= */
+
+.footer-text {
+  color: #9f9f9f;
+  font-size: 13px;
+
+  font-weight: 300; /* mais leve */
+  line-height: 1.4;
+}
+@media (max-width: 768px) {
+  .footer {
+    padding: 25px 15px;
+  }
+
+  .footer-badge,
+  .footer-text {
+    font-size: 12px;
+  }
+}
