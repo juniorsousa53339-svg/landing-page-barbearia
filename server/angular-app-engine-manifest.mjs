@@ -1,6 +1,6 @@
 
 export default {
-  basePath: '/',
+  basePath: 'https://juniorsousa53339-svg.github.io/landing-page-barbearia',
   allowedHosts: [],
   supportedLocales: {
   "en-US": ""
